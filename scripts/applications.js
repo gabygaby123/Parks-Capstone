@@ -45,7 +45,7 @@ function filterParks(){
 }
 
 function displayNationalParks(parkList) {
-    const parksContainer = document.querySelector("#content");
+    const parksContainer = document.getElementById("content");
     parksContainer.innerHTML = "";
     parkList.forEach(park => displayNationalPark(park, parksContainer));
 }
