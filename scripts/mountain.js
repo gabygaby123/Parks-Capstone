@@ -2,7 +2,7 @@ document.addEventListener("DOMContentLoaded",()=>{
     populateMountains();
 
     const mountainList = document.getElementById("mountainSelect")
-    mountainList.onchange = displayMountain
+    mountainList.onchange = findMountain
 })
 
 function populateMountains(){
@@ -13,6 +13,13 @@ function populateMountains(){
     })
 }
 
-function displayMountain(){
+function findMountain(){
+    const mountainList = document.getElementById("mountainSelect").value
+    let mountainFind;
+    if(mountainList != "Select Location"){
+         mountainFind=mountainsArray.find(mountain => mountain.name.includes(mountainList))
     
+         console.log(mountainFind)
+         displayMountain(mountainFind)
+    }
 }
