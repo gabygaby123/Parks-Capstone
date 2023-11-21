@@ -45,7 +45,7 @@ function addMountainImage(mountain, details) {
     details.appendChild(mountainImage);
 }
 function addMountainDescription(mountain, details) {
-    const mountainDescription = document.createElement("");
+    const mountainDescription = document.createElement("h4");
     mountainDescription.innerText = "Description: " + mountain.desc;
     details.appendChild(mountainDescription)
 }
